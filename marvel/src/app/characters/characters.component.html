@@ -1,0 +1,18 @@
+<div class="container" >
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+      <div class="col" *ngFor="let character of characters">
+        <div class="card">
+          <img
+            src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
+            class="card-img-top img-fluid"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ character.name }}</h5>
+            <p class="card-text">{{ character.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
