@@ -1,7 +1,7 @@
 # Frontend-Test
 ## ¡Hola! Muchas gracias por permitirme participar en este proceso de selección.
 
-### Los archivos se deben descargar desde la rama ***main**
+### Los archivos se deben descargar desde la rama *main*
 
 *Para el reto 1:*
 
