@@ -11,6 +11,8 @@ import { CharactersComponent } from './characters/characters.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-
+    InfiniteScrollModule,
+    MatGridListModule 
   ],
   providers: [
     MarvelApiService

@@ -1,21 +1,49 @@
-<div class="container">
-    <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
-        <div class="col" *ngFor="let character of characters">
-            <div class="card">
-                <img src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
-                    class="card-img-top img-fluid" />
-                <div class="card-body">
-                    <h5 class="card-title">{{ character.name }}</h5>
-                    <p class="card-text">{{ character.description }}</p>
-                    <p>Modified: {{ character.modified | date: 'dd/MM/yyyy' }}</p>
+<div class="space"></div>
+<div infinite-scroll [infiniteScrollDistance]="distance" [infiniteScrollThrottle]="throttle" (scrolled)="onScroll()">
 
+    <div class="container">
+        <h1>
+            <strong id="contenido">Marvel Universe </strong>
+        </h1>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+            <div class="col" *ngFor="let character of characters">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <div class="flip-card-front">
+                            <div class="card animate__bounceIn">
+                                <img src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
+                                    class="card-img-top img-fluid" style="height: 300px" />
+                                <div class="card-body">
+                                    <h3 class="card-title">{{ character.name }}</h3>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card-back">
+                            <div class="card-body">
+                                <mat-card>
+                                    <mat-card-title-group>
+                                        <mat-card-title>
+                                            <h1>{{ character.name }}</h1>
+                                        </mat-card-title>
+                                    </mat-card-title-group>
+                                    <mat-card-content>
+                                        <p>{{ character.description }}</p>
+                                        <mat-card-subtitle> Modified: {{ character.modified | date: 'dd/MM/yyyy' }}
+                                        </mat-card-subtitle>
+                                    </mat-card-content>
+                                </mat-card>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <button mat-fab color="primary">
+    <button mat-fab color="primary" type="submit">
         <mat-icon>keyboard_arrow_up</mat-icon>
+        
     </button>
-
-</div>
