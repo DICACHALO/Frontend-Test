@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MarvelApiService } from './services/marvel-api.service';
 import { CoreModule } from './core/core.module';
 import { CharactersComponent } from './characters/characters.component';
-
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -23,7 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
     HttpClientModule,
     CoreModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
 
   ],
   providers: [
